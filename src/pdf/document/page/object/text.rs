@@ -161,7 +161,7 @@ impl PdfPageTextRenderMode {
 /// use the [PdfPageTextObject::new()] function. The detached page text object can later
 /// be attached to a page by using the [PdfPageObjectsCommon::add_text_object()] function.
 pub struct PdfPageTextObject<'a> {
-    object_handle: FPDF_PAGEOBJECT,
+    pub object_handle: FPDF_PAGEOBJECT,
     ownership: PdfPageObjectOwnership,
     bindings: &'a dyn PdfiumLibraryBindings,
 }
